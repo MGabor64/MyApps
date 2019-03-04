@@ -8,8 +8,14 @@ namespace MyFirstApp
 {
     class Fruit
     {
-        public string Name;
-        public string Country;
-        public int Quantity;
+        public string Neve;
+        public string Szarmazasihely;
+        public int Mennyisege;
+        public Fruit(string aNeve, string aSzhelye, int aMenny)
+        {
+            Neve = aNeve;
+            Szarmazasihely = aSzhelye;
+            Mennyisege = aMenny;
+        }
     }
 }
