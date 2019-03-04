@@ -8,5 +8,8 @@ namespace MyFirstApp
 {
     class Fruit
     {
+        public string Name;
+        public string Country;
+        public int Quantity;
     }
 }
