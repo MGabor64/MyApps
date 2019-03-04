@@ -16,6 +16,7 @@ namespace MyFirstApp
             Neve = aNeve;
             Szarmazasihely = aSzhelye;
             Mennyisege = aMenny;
+            Console.WriteLine("DEBUG: fruit() konstruktor meghívás");
         }
     }
 }
