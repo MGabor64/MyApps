@@ -54,6 +54,23 @@ namespace kpo
                         break;
 
                 }
+                ///Értékeljük ki a compChoice és a myChoice változókat
+                ///
+                if((myChoice=="kő"&&compChoice=="papír")||(myChoice=="papír"&&compChoice=="olló")||(myChoice=="olló"&& compChoice=="kő"))
+                {
+                    Console.WriteLine("Számítógép: " + compChoice + "Te: " + myChoice);
+                    Console.WriteLine("Vesztettél! Állás:Számítógép:{0} Játékos:{1}", ++compScore, myScore);
+                }
+                else if ((myChoice == compChoice ))
+                {
+                    Console.WriteLine("Számítógép: " + compChoice + "Te: " + myChoice);
+                    Console.WriteLine("Döntetlen! Állás:Számítógép:{0} Játékos:{1}", compScore, myScore);
+                }
+                else
+                {
+                    Console.WriteLine("Számítógép: " + compChoice + "Te: " + myChoice);
+                    Console.WriteLine("Nyertél! Állás:Számítógép:{0} Játékos:{1}", compScore, ++myScore);
+                }
                 Console.WriteLine("Akarsz még játszani? i/n");
                 if (Console.ReadKey(true).KeyChar == 'n')
                 {
