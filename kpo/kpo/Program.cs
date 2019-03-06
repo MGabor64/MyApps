@@ -16,6 +16,7 @@ namespace kpo
             string compChoice="";
             string myChoice="";
             int compScore = 0, myScore = 0;
+            Random r = new Random();
 
             bool moreGame = true;
             Console.WriteLine("===============================================Kő,Papír, Olló játék====================================================");
@@ -37,8 +38,23 @@ namespace kpo
                         break;
 
                 }
+                ///számítógép választásának kérése
+                ///
+                switch (r.Next(0, 3))
+                {
+                    
+                    case 0:
+                        compChoice = "kő";
+                        break;
+                    case 1:
+                        compChoice = "papír";
+                        break;
+                    case 2:
+                        compChoice = "olló";
+                        break;
 
-                Console.Write("Akarsz még játszani? i/n");
+                }
+                Console.WriteLine("Akarsz még játszani? i/n");
                 if (Console.ReadKey(true).KeyChar == 'n')
                 {
                     moreGame = false;
