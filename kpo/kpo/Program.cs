@@ -16,6 +16,11 @@ namespace kpo
             Console.WriteLine("===============================================Kő,Papír, Olló játék====================================================");
             do
             {
+                string compScore;
+                string mysSore;
+                int compscore = 0, myscore = 0;
+
+
                 Console.Write("Akarsz még játszani? i/n");
                 if (Console.ReadKey(true).KeyChar == 'n')
                 {
