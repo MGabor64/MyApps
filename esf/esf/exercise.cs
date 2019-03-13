@@ -14,9 +14,6 @@ namespace esf
         {
             Name = aName;
         }
-        public void NamePrint()
-        {
-            Console.WriteLine(ex.Name);
-        }
+       
     }
 }
