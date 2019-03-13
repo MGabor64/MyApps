@@ -11,6 +11,7 @@ namespace esf
         static void Main(string[] args)
         {
             int v = 0;
+            string s;
             exercise ex = new exercise("Maglódi Gábor");
 
             Console.WriteLine(ex.Name);
@@ -60,6 +61,8 @@ namespace esf
                     Console.WriteLine("Szvics:" + v);
                     break;
             }
+            //Beolvasás konzloról
+            s= Console.ReadLine();
             Console.ReadKey();
         }
     }
