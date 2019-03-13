@@ -10,8 +10,12 @@ namespace esf
     {
         static void Main(string[] args)
         {
+            exercise ex = new exercise("Maglódi Gábor");
+
+            Console.WriteLine(ex.Name);
 
             Console.ReadKey();
+
         }
     }
 }
