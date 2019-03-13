@@ -33,9 +33,34 @@ namespace esf
                 Console.WriteLine("Do while ciklus");
                 v--;
             } while (v>0);
+            
+            ///elágazások
+            ///
+            if (v==2)
+            {
+                Console.WriteLine("A 'v' értéke 2");
+                
+            }
+            else if (v==3)
+            {
+                Console.WriteLine("A 'v' értéke 3");
+            }
+            else
+            {
+                Console.WriteLine("V nem 2 és nem 3, hanem"+v);
+            }
+            //elágazások
+            v = 0;
+            switch (v)
+            {
+                case 0:
+                    Console.WriteLine("Szvics:" + v);
+                    break;
+                case 3:
+                    Console.WriteLine("Szvics:" + v);
+                    break;
+            }
             Console.ReadKey();
-
-
         }
     }
 }
