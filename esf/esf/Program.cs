@@ -13,7 +13,9 @@ namespace esf
             exercise ex = new exercise("Maglódi Gábor");
 
             Console.WriteLine(ex.Name);
+            ex.PrintName();
 
+            Console.WriteLine(ex.getName());
             Console.ReadKey();
 
         }
