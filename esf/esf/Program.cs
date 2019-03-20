@@ -8,7 +8,10 @@ namespace esf
 {
     class Program
     {
-        
+        private static string sName;
+        private static string sAuthor;
+        private static int iPage;
+
         static void Main(string[] args)
         {
             int v = 0;
@@ -102,6 +105,50 @@ namespace esf
                 Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
             }
             Console.WriteLine("Keressük az Oroszlánkölykök könyvet: " + Lista.Find(x => x.Name.Contains("Oroszlánkölykök")).Name);
+            //feladat: egészítsük ki úgy a programot, hogy a felhasználó lehetőséget kapjon a könyvtár mógosítására
+            //ha u: könyvet felvisz a könyvtárba
+            //ha t:kérdezze meg, hogy mejiket akarod kitörölni
+            //ha l: listázza a könyveket
+            bool morebook=true;
+           
+           
+            do
+            {
+                Console.WriteLine("Üdvözöllek a könyv-rendszerezőben! Mit szeretnél csinálni? bekérni( u )/törölni( t )/listázni( l )/kilépni( k )");
+                switch (Console.ReadKey(true).KeyChar)
+                {
+                    case 'u':
+                        Console.Write("Kérem a könyv címét:");
+                        sName = Console.ReadLine();
+                        Console.Write("Kérem a könyv szerzőjét:");
+                        sAuthor = Console.ReadLine();
+                        Console.Write("Kérem a könyv lapjainak számát:");
+                        iPage = int.Parse( Console.ReadLine());
+                        Lista.Add(new Book { Name = sName, Author = sAuthor, Page = iPage });
+                        break;
+                    case 'k':
+                        morebook = false;
+                        break;
+                    case 't':
+                        Console.WriteLine("Kérem a könyv címét:");
+                        sName = Console.ReadLine();
+                        Lista.Remove(Lista.Find(x => x.Name.Contains(sName)));
+
+                        break;
+                    case 'l':
+                        Console.WriteLine("Könyvtár tartlma:");
+                        foreach (Book book in Lista)
+                        {
+                            Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+                        }
+                        break;
+                    
+                 
+
+
+                }
+                
+            } while (morebook);
             Console.ReadKey();
         }
     }
