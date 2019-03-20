@@ -110,11 +110,15 @@ namespace esf
             //ha t:kérdezze meg, hogy mejiket akarod kitörölni
             //ha l: listázza a könyveket
             bool morebook=true;
-           
-           
+            string abcd = (sName);
+            Console.WriteLine("***********************************");
+            Console.WriteLine("Üdvözöllek a könyv-rendszerezőben!");
+            Console.WriteLine("***********************************");
             do
             {
-                Console.WriteLine("Üdvözöllek a könyv-rendszerezőben! Mit szeretnél csinálni? bekérni( u )/törölni( t )/listázni( l )/kilépni( k )");
+                Console.WriteLine("---------------------------------------------------------------------------");
+                Console.WriteLine("Mit szeretnél csinálni? bekérni( u )/törölni( t )/listázni( l )/kilépni( k )");
+                Console.WriteLine("---------------------------------------------------------------------------");
                 switch (Console.ReadKey(true).KeyChar)
                 {
                     case 'u':
@@ -130,7 +134,7 @@ namespace esf
                         morebook = false;
                         break;
                     case 't':
-                        Console.WriteLine("Kérem a könyv címét:");
+                        Console.Write("Kérem a könyv címét:");
                         sName = Console.ReadLine();
                         Lista.Remove(Lista.Find(x => x.Name.Contains(sName)));
 
@@ -149,7 +153,7 @@ namespace esf
                 }
                 
             } while (morebook);
-            Console.ReadKey();
+           
         }
     }
 }
