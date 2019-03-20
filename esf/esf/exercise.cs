@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace esf
 {
-    class exercise
+    class Exercise
     {
         public string Name;
         /// <summary>
         /// konstruktor initalizálja az osztály adattagjait
         /// </summary>
         /// <param name="aName"></param>
-        public exercise(string aName)
+        public Exercise(string aName)
         {
             Name = aName;
         }
