@@ -10,9 +10,9 @@ namespace animaal
     {
         static void Main(string[] args)
         {
-            Cat myCat = new Cat("Cirmi");
-            Dog myDog = new Dog("Buksi");
-            Cat myCat1 = new Cat("Kormos");
+            Cat myCat = new Cat("Cirmi", true);
+            Dog myDog = new Dog("Buksi", false);
+            Cat myCat1 = new Cat("Kormos", false);
             myCat.Sleep();
             myCat.Hunt();
             myCat.Sound();

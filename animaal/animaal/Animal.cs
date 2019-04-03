@@ -9,10 +9,11 @@ namespace animaal
     abstract class Animal
     {
         public string Name;
+        public bool isFemale;
         abstract public void Sleep();
         abstract public void Hunt();
         abstract public void Sound();
-        
+        abstract public void Born(int i);
 
 
     }
@@ -24,17 +25,18 @@ namespace animaal
 
 
 
-        public Cat(string aName)
+        public Cat(string aName, bool aGender)
         {
             Name = aName;
+            isFemale = aGender;
         }
 
-        internal void Born(int v)
+        public override void Born(int v)
         {
             Kids = new List<Cat>();
             for(int i=0; i<v;i++)
             {
-                Kids.Add(new Cat("cica" + i.ToString()));
+                Kids.Add(new Cat("cica" + i.ToString(),true));
             }
 
         }
@@ -52,7 +54,7 @@ namespace animaal
             Console.WriteLine(Name + " is meowing....");
         }
 
-        internal void Child()
+        public void Child()
         {
             foreach (var item in Kids)
             {
@@ -68,7 +70,7 @@ namespace animaal
         {
             Name = aName;
         }
-        internal void Born(int v)
+        public override void Born(int v)
         {
             dKids = new List<Dog>();
             for (int i = 0; i < v; i++)
@@ -90,12 +92,16 @@ namespace animaal
             Console.WriteLine(Name + " is barking....");
         }
 
-        internal void Child()
+        public void Child()
         {
-            foreach (var item in dKids)
+            if(dKids !=null)
             {
-                Console.WriteLine(Name + " " + item.Name);
+                foreach (var item in dKids)
+                {
+                    Console.WriteLine(Name + " " + item.Name);
+                }
             }
+            
         }
 
         
