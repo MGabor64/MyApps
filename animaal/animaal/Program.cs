@@ -22,7 +22,8 @@ namespace animaal
             myDog.Sleep();
             myDog.Hunt();
             myDog.Sound();
-
+            myDog.Born(3);
+            myDog.Child();
             
 
             Console.ReadLine();

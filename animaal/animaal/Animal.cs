@@ -62,10 +62,20 @@ namespace animaal
     }
     class Dog : Animal
     {
+        private List<Dog> dKids;
         //konstruktor
         public Dog(string aName)
         {
             Name = aName;
+        }
+        internal void Born(int v)
+        {
+            dKids = new List<Dog>();
+            for (int i = 0; i < v; i++)
+            {
+                dKids.Add(new Dog("kisblöki" + i.ToString()));
+            }
+
         }
         public override void Sleep()
         {
@@ -80,5 +90,14 @@ namespace animaal
             Console.WriteLine(Name + " is barking....");
         }
 
+        internal void Child()
+        {
+            foreach (var item in dKids)
+            {
+                Console.WriteLine(Name + " " + item.Name);
+            }
+        }
+
+        
     }
 }
