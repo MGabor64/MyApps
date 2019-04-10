@@ -28,6 +28,14 @@ namespace tipuskonverzio
 
             string cc = c as string;
             Console.WriteLine(cc == null ? "NULL" : cc);//NULL
+
+            //karakterkonverziók
+            for (char ch = 'A'; ch <= 'Z'; ++ch)
+            {
+                Console.Write((int)ch);
+            }
+
+
             Console.ReadKey();
 
 
