@@ -38,7 +38,21 @@ namespace lab_05_20
 
                 Console.WriteLine(e.Message);
             }
-
+           
+            for (int i = 0; i < 50; i++)
+            {
+               // Console.Write("Ciklus");
+                if((i%3)==0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            //feladat 50ig prímszámok
+            //
+            for (int i = 0; i < 50; i++)
+            {
+                
+            }
             Console.ReadLine();
         }
     }
